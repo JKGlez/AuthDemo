@@ -1,0 +1,27 @@
+<h2> {{message}} </h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Admin action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; index as i">
+      <td>
+        <!-- <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="me-2" style="width: 20px"> -->
+        {{ user.Id }}
+      </td>
+      <td>{{ user.Name }}</td>
+      <td>{{ user.Email }}</td>
+      <td *ngIf="user.Role == 0">Administrator</td>
+      <td *ngIf="user.Role == 1">Employee</td>
+      <td>
+        <button type="button" class="btn btn-danger" [disabled]="admin" > Delete </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,32 @@
+<div class="card w-50 m-auto">
+  <div class="card-header">REGISTER</div>
+  <div class="card-body">
+    <form [formGroup]="formLogin" (submit)="submit()">
+      <div class="form-floating">
+        <input formControlName="name" class="form-control" placeholder="name" />
+        <label for="floatingInput">Name</label>
+      </div>
+      <div class="form-floating">
+        <input
+          formControlName="email"
+          type="email"
+          class="form-control"
+          placeholder="name@example.com"
+        />
+        <label for="floatingInput">Email address</label>
+      </div>
+
+      <div class="form-floating">
+        <input formControlName="password" type="password" class="form-control" placeholder="Password" />
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="form-floating">
+        <input formControlName="roledescription" class="form-control" placeholder="roledescription" />
+        <label for="floatingInput">Role</label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">
+        Sign in
+      </button>
+    </form>
+  </div>
+</div>
